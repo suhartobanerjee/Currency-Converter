@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>x64</Platforms>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <ApplicationIcon>./icons/exchange-euro_icon-icons.com_53140.ico</ApplicationIcon>
+    <PackageId>$(AssemblyName.Replace(" ", "_"))</PackageId>
+    <Authors>Suharto Banerjee</Authors>
+    <Company>SuhartoBanerjee_FOSS</Company>
+    <Description>A fast and convenient Currency Converter.</Description>
+    <PackageIcon>./icons/exchange-euro_icon-icons.com_53140.ico</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Page Remove="src\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="src\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="./icons/exchange-euro_icon-icons.com_53140.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="./icons/exchange-euro_icon-icons.com_53140.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
